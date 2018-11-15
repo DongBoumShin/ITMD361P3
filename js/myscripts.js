@@ -20,7 +20,7 @@ function rotate(speed) {
   var degrees = 0;
   var pic = document.getElementById('sigong');
   pic.style.transform = "rotate("+degrees+"deg)";
-  looper = setTimeout('rotateAnimation(\''+pic+'\','+speed+')',speed);
+  looper = setTimeout('rotateAnimation(\''+sigong+'\','+speed+')',speed);
   degrees++;
   if(degrees>359){
     degrees=1;
