@@ -1,0 +1,199 @@
+/*Shared properties:
+    1.background&body
+    2.header&navigation list
+    3.footer&reference links
+    4.h1*/
+header{
+  width: 100%;
+}
+header ul{
+  display: inline-block;
+  float: inherit;
+  height: auto;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+header nav{
+  display: flex;
+  background-color: aliceblue;
+  justify-content: center;
+}
+header ul li{
+  position: relative;
+  left: 0;
+  display: inline-block;
+  font-size: 15pt;
+  font-variant-caps: petite-caps;
+  background-color: beige;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+header ul li a{
+  text-decoration-line:none;
+  color: darkblue;
+}
+header ul li a:hover{
+  text-decoration-line: underline;
+  font-weight: 600;
+  color: darkgreen;
+}
+header ul li:hover{
+  background-color: darksalmon;
+}
+div.heading1{
+  /*min-width: 600px;
+  width: 100%;
+  position: relative;*/
+  display: flex;
+  justify-content: center;
+}
+/*div.heading1 div{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+h1{
+  display: inline-block;
+  width: 600px;
+  text-align: center;
+}/*h1 bug fixed*/
+/*I know link titles overflow to next line when compressed, but I can't fix that here.
+All the lines have different sizes, so I'd either have to add a lot of screens, which I can't test all.
+Or I'd get js to see if the thing overlaps, I don't know if it works though.*/
+section#link{
+  background-color: lightpink;
+  text-align: center;
+  width: 50%;
+  left: 25%;
+  position: relative;
+  border-color: red;
+  border-width: medium;
+  margin-top: 70px;
+}
+section#link div{
+  background-color: chartreuse;
+  width: 100%;
+  height: 20px;
+}
+section#link div a{
+  text-decoration-line: none;
+}
+section#link div a:hover{
+  background-color: aquamarine;
+}
+footer{
+  color: violet;
+  text-align: center;
+  width: 100%;
+  border-color: red;
+  border-width: medium;
+}
+body  {
+  background-image: url("../ext_content/geoshapes.png");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+}
+/*--differentpage--*/
+/*foi start*/
+div#content_fixedpx{
+  position: relative;
+  top:50px;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#content_fixedpx img{
+  width: inherit;
+}
+div#content_fixedpx h2{
+  text-align: center;
+}
+div#content_fixedpx h4{
+  text-align: center;
+}
+/*--differentpage--*/
+/*resume start*/
+div#content_fluid{
+  position: relative;
+  top: 50px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#content_fluid ul{
+  list-style: square;
+}
+div#content_fluid h2{
+  text-align: center;
+  text-decoration: underline;
+}
+div#content_fluid h2+ul li{
+  list-style: none;
+  text-align: right;
+}
+div#content_fluid div.wh1{
+  width: 45%;
+  float: right;
+  height: 400px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+div#content_fluid div.wh2{
+  width: 45%;
+  float: left;
+  height: 400px;
+  margin-bottom: 10px;
+  margin-right:auto;
+}
+/*Cant get these to have same height and be automatic, so fixed height, but now website breaks if sqeezed too hard.
+So I added media query for this only!*/
+@media screen and (max-width:700px){
+  div#content_fluid div.wh1{
+    float: none;
+    height: auto;
+    width: inherit;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  div#content_fluid div.wh2{
+    float: none;
+    height: auto;
+    width: inherit;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/*--differentpage--*/
+/*index start*/
+div#content_fluid img{
+  width: 100%;
+}
+div#content_fluid video{
+  width: 100%;
+  height: auto;
+}
+div#content_fluid figcaption{
+  text-align: center;
+  text-decoration:underline;
+  font-size: 10pt;
+  font-weight: 600;
+  font-family: serif;
+}
+div#content_fluid h2+div{
+  border-width: 5pt;
+  border-color: firebrick;
+  border-style: ridge;
+}
+div#content_fluid h2+div p{
+  text-align: center;
+  font-size: 20px;
+  color: firebrick;
+  font-weight: 600;
+}
+/*--differentpage--*/
