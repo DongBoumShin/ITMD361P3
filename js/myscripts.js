@@ -14,3 +14,15 @@ function initMap() {
     icon: greed
   });
 }
+
+/*function rotate(speed) {
+  var looper;
+  var degrees = 0;
+  var pic = document.getElementById('sigong');
+  pic.style.transform = "rotate("+degrees+"deg)";
+  looper = setTimeout('rotateAnimation(\''+pic+'\','+speed+')',speed);
+  degrees++;
+  if(degrees>359){
+    degrees=1;
+  }
+}*/
