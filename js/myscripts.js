@@ -15,7 +15,7 @@ function initMap() {
   });
 }
 
-/*function rotate(speed) {
+function rotate(speed) {
   var looper;
   var degrees = 0;
   var pic = document.getElementById('sigong');
@@ -25,4 +25,4 @@ function initMap() {
   if(degrees>359){
     degrees=1;
   }
-}*/
+}
