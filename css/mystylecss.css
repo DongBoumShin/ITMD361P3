@@ -197,3 +197,8 @@ div#content_fluid h2+div p{
   font-weight: 600;
 }
 /*--differentpage--*/
+#map{
+  width: 100%;
+  height: 500px;
+  background-color: gray;
+}
