@@ -15,22 +15,22 @@ function initMap() {
   });
   marker.addEventListener("click", toggleBounce);
 }
-  function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-  }
-
-function rotate(speed) {
-  var looper;
-  var degrees = 0;
-  var pic = document.getElementById('sigong');
-  pic.style.transform = "rotate("+degrees+"deg)";
-  looper = setTimeout('rotateAnimation(\''+sigong+'\','+speed+')',speed);
-  degrees++;
-  if(degrees>359){
-    degrees=1;
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
+
+var degrees = 0;
+var speed = 100;
+function rotate() {
+  var pic = document.getElementById('sigong');
+  pic.style.transform = "rotate("+degrees+"deg)";
+  degrees--;
+  if(degrees<-359){
+    degrees=0;
+  }
+}
+window.onload=setInterval(rotate, 1000/speed);
