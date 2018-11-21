@@ -14,4 +14,4 @@ function slideShow() {
   if(arrIndex == slideArr.length)
     arrIndex=0;
 }
-setInterval(slideShow, duration);
+window.onload=setInterval(slideShow, duration);
