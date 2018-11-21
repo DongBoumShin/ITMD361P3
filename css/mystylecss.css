@@ -202,3 +202,10 @@ div#content_fluid h2+div p{
   height: 500px;
   background-color: gray;
 }
+#slideshow_imgs{
+  width: 0;
+  height: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,17 +1,11 @@
-var slideArr =[
-  '../ext_content/slideshow/83357.jpg',
-  '../ext_content/slideshow/275372.jpg',
-  '../ext_content/slideshow/679714.jpg',
-  '../ext_content/slideshow/787153.jpg',
-  '../ext_content/slideshow/hotslogo.jpg'
-]
 var arrIndex = 0;
 var duration = 3000;
 
 function slideShow() {
-  document.getElementById('slideshow').src = slideArr[arrIndex];
+  var slideImg = document.querySelectorAll('#slideshow_imgs li img');
+  document.getElementById('slideshow').src = slideImg[arrIndex].getAttribute("src");
   arrIndex++;
-  if(arrIndex == slideArr.length)
+  if(arrIndex == slideImg.length)
     arrIndex=0;
 }
 window.onload=setInterval(slideShow, duration);
